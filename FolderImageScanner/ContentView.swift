@@ -71,6 +71,8 @@ struct FolderChooser {
         guard let url = url else { return [:] }
         var files: [String: [String]] = [:]
         
+        let validExtensions = ["jpg", "png", "jpeg", "gif"]
+        
         do {
             let fileURLs = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil)
             
@@ -84,7 +86,7 @@ struct FolderChooser {
                     } else {
                         files[directoryName] = subdirFiles.flatMap { $0.value }
                     }
-                } else if fileURL.pathExtension == "jpg" {
+                } else if validExtensions.contains(fileURL.pathExtension) {
                     let relativePath = String(fileURL.path.dropFirst(rootURL.path.count))
                     let directoryName = fileURL.deletingLastPathComponent().lastPathComponent
                     
