@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		557C4A362A42B919002789EC /* FolderImageScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolderImageScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557C4A392A42B919002789EC /* FolderImageScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderImageScannerApp.swift; sourceTree = "<group>"; };
-		557C4A3D2A42B91A002789EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		557C4A3D2A42B91A002789EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = FolderImageScanner/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		557C4A402A42B91A002789EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		557C4A422A42B91A002789EC /* FolderImageScanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FolderImageScanner.entitlements; sourceTree = "<group>"; };
 		557C4A482A42D0C3002789EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -272,6 +272,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FolderImageScanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,6 +298,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FolderImageScanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
