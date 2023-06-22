@@ -17,10 +17,13 @@ struct ContentView: View {
     @State private var chosenFolder = ""
     @State private var imageFiles: ImageFiles?
     @State private var jsonWritten = false
+    @State private var totalImageCount = 0
     
     var body: some View {
         VStack {
-            Text("Choose Directory")
+            Text("Write Image File Names to JSON")
+                .font(.title3)
+            
             
             Button {
                 FolderChooser.choose { url, files in
@@ -33,18 +36,27 @@ struct ContentView: View {
                     }
                     
                     
-                    let totalImageCount = imageFiles?.categories.values.reduce(0) { $0 + $1.count } ?? 0
+                    totalImageCount = imageFiles?.categories.values.reduce(0) { $0 + $1.count } ?? 0
                     print("Total number of image files: \(totalImageCount)")
                 }
             } label: {
-                Text("Choose")
-                    
+                Text("Choose Folder")
             }
-            .padding(10)
+            .buttonStyle(.bordered)
+            .padding(20)
+            
+            
+            
             
             Text("JSON File written to \(chosenFolder)")
                 .font(.caption)
                 .opacity(jsonWritten ? 1 : 0)
+            
+            Text("Total number of images: \(totalImageCount)")
+                .font(.caption)
+                .opacity(jsonWritten ? 1 : 0)
+            
+            
         }
         .padding(20)
     }
@@ -131,10 +143,6 @@ struct FolderChooser {
             print("Failed to encode and write JSON data: \(error)")
         }
     }
-
-
-    
-    
 }
 
 
